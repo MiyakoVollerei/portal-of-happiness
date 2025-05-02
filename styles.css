@@ -184,7 +184,7 @@ header {
   height: 845px;
   border: 1px solid black;
 
-  background-image: url(https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2F%2F30402c40-748f-4403-b7c7-d55e033d8830/watermark:F/width:450?csig=AAAAAAAAAAAAAAAAAAAAAKE1sCRTs9my9XO3Vw3NJRSCvrZb3mYtlXLSL-lNTd7-&exp=1745960604&osig=AAAAAAAAAAAAAAAAAAAAAEJYBiSC090STr9DdJXtcNClbH8_nTT21b6doXYDV3dm&signer=media-rpc&x-canva-quality=screen);
+  background-image: url("images/background-elementoA.png");
   background-position: center;
   background-size: cover;
 
