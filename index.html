@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Tiny5&display=swap"
+        rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/kuromi.icon" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Marry Me?</title>
+</head>
+
+<!-- fazendo essa página para que meu amor nunca se esqueça do quanto eu a amo, de como cada momento nosso fez eu me apaixonar ainda mais por ela -->
+<!-- espero que esse "portal" fique a altura de nossas memórias -->
+
+<body>
+
+    <div id="tela-senha">
+        <div class="caixa-senha">
+            <img src="https://64.media.tumblr.com/5d67e9981ee902faa3a9a404dbcfe3b2/354d99c6c057648a-61/s400x600/9b9ef3a70930bc90c461738e1e0c8a4d2d7124f4.gifv"
+                alt="mew" width="100px" height="62px">
+            <h2>Bem-vinda</h2>
+            <p>Digite a senha para entrar no portal</p>
+            <input type="password" id="senha" placeholder="Senha secreta">
+            <button onclick="verificarSenha()">Entrar</button>
+            <p id="mensagem-erro" style="color: red; display: none;">Senha incorreta!</p>
+        </div>
+    </div>
+
+    <div id="conteudo" style="display:none;">
+        <header>
+            <div class="header-content">
+                <div class="portal">
+                    <img src="https://i.pinimg.com/originals/bc/92/a5/bc92a54fd52558c950378140d66059e3.gif" alt="portal"
+                        width="150px" height="150px">
+                </div>
+                <div class="titulo">
+                    <h1 class="tiny5-regular">PORTAL OF HAPPINESS</h1>
+                    <h3>幸福のポータル</h3>
+                </div>
+                <div class="she">
+                    <img src="https://media-public.canva.com/911tY/MAEc20911tY/1/t.png" alt="she" width="150px"
+                        height="150px">
+                </div>
+            </div>
+        </header>
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="container">
+            <div class="elementoA">
+                <h3 class="pixelify-sans-bold">MELHORES MOMENTOS</h3>
+                <div class="mural-fotos">
+                    <button class="seta" onclick="mover(-1)">←</button>
+
+                    <div class="carousel">
+                        <div class="polaroid" id="foto-esquerda">
+                            <img src="" alt="Polaroid esquerda">
+                        </div>
+                        <div class="polaroid destaque" id="foto-centro">
+                            <img src="" alt="Polaroid centro">
+                        </div>
+                        <div class="polaroid" id="foto-direita">
+                            <img src="" alt="Polaroid direita">
+                        </div>
+                    </div>
+                    <button class="seta" onclick="mover(1)">→</button>
+                </div>
+                <h3 id="playlist" class="pixelify-sans-bold">PLAYLIST</h3>
+                <div class="playlist-box">
+                    <iframe width="100%" height="152" style="border-radius:12px"
+                        src="https://open.spotify.com/embed/playlist/1piOWOqNg56vMlNehhUybL?utm_source=generator"
+                        frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <!----------------------------------------------------------------------------------------------------------------------------------------------------->
+            <!-- aqui estará todo o conteúdo principal, mas minha criatividade ainda é falha ;-; -->
+            <div class="elementoB">
+                <div class="container-barra-progresso">
+                    <div class="barra-progresso">
+                        <div class="progresso" style="width: 40%;"></div>
+
+                        <div class="objetivo" style="left: 10%;" title="Se conhecer"></div>
+                        <div class="objetivo" style="left: 20%;" title="Beijar"></div>
+                        <div class="objetivo" style="left: 30%;" title="#######"></div>
+                        <div class="objetivo" style="left: 40%;" title="Namorar"></div>
+                        <div class="objetivo" style="left: 50%;" title="Morar juntos"></div>
+                        <div class="objetivo" style="left: 60%;" title="Estabilidade"></div>
+                        <div class="objetivo" style="left: 70%;" title="Adotar um gatinho"></div>
+                        <div class="objetivo" style="left: 80%;" title="Casar"></div>
+                        <div class="objetivo" style="left: 90%;" title="Visitar outro país"></div>
+                    </div>
+                    <div class="nivel">40</div>
+                </div>
+                <div class="container-blocos">
+                    <div class="bloco">Conteúdo 1</div>
+                    <div class="bloco">Conteúdo 2</div>
+                    <div class="bloco">Conteúdo 3</div>
+                    <div class="bloco">Conteúdo 4</div>
+                </div>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+    </div>
+
+    <div id="loading">
+        <div class="caixa-loading">
+            <p>Carregando o portal...</p>
+            <img src="https://64.media.tumblr.com/8aacd06dce8447b271606ff73efc3ab1/e619323abe72d535-8f/s75x75_c1/df93598b8d644ce6a93de1b54fb8a330b4174f59.gifv"
+                alt="miku-loading">
+        </div>
+    </div>
+
+    <script>
+        function verificarSenha() {
+            const senhaCorreta = "26042025";
+            const senhaDigitada = document.getElementById("senha").value;
+
+            if (senhaDigitada === senhaCorreta) {
+                document.getElementById("mensagem-erro").style.display = "none";
+
+                // Apaga a tela da senha
+                document.getElementById("tela-senha").style.opacity = "0";
+                setTimeout(() => {
+                    document.getElementById("tela-senha").style.display = "none";
+
+                    // Mostra tela de loading
+                    const loading = document.getElementById("loading");
+                    loading.style.display = "flex";
+
+                    // Depois de 3 segundos, mostra o conteúdo
+                    setTimeout(() => {
+                        loading.style.display = "none";
+                        document.getElementById("conteudo").style.display = "block";
+                    }, 3000);
+                }, 800); // tempo para tela-senha sumir suavemente
+            } else {
+                document.getElementById("mensagem-erro").style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

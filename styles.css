@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*-------------------------------------------------------*/
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+  /* evita scroll na página */
+  color: aliceblue;
+  background-color: rgb(0, 0, 0);
+}
+
+/*-------------------------FONTES------------------------------*/
+.pixelify-sans-regular {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+  /* Peso normal */
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.pixelify-sans-bold {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 700;
+  /* Peso negrito */
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.tiny5-regular {
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*--------------------------LOGIN-----------------------------*/
+#tela-senha {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(images/login-backgrund.gif);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.caixa-senha {
+  background-color: rgb(59, 59, 59);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.caixa-senha input {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.caixa-senha button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #aa1c63;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.caixa-senha button:hover {
+  background-color: #e94ea2;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  color: white;
+  font-family: "Pixelify Sans", sans-serif;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.caixa-loading {
+  text-align: center;
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#tela-senha {
+  transition: opacity 0.8s ease;
+}
+
+/*-------------------------------------------------------*/
+header {
+  display: flex;
+  background-color: black;
+  padding: 20px 40px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 170px;
+  /* altura fixa */
+  background-color: black;
+  z-index: 1000;
+  /* fica acima do resto */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  /* alinha verticalmente */
+  justify-content: space-between;
+  /* espaça os três blocos */
+  padding: 0 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.titulo {
+  text-align: center;
+  flex: 1;
+}
+
+.titulo h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.titulo h3 {
+  color: rgb(175, 28, 138);
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/*-------------------------------------------------------*/
+.container {
+  display: flex;
+  height: calc(100vh - 170px);
+  /* ajustando a altura considerando o header (~170px) */
+  margin-top: 170px;
+  /* empurra o conteúdo pra baixo do header */
+}
+
+.elementoA {
+  width: 30%;
+  height: 845px;
+  border: 1px solid black;
+
+  background-image: url(https://media.canva.com/v2/image-resize/format:PNG/height:800/quality:100/uri:ifs%3A%2F%2F%2F30402c40-748f-4403-b7c7-d55e033d8830/watermark:F/width:450?csig=AAAAAAAAAAAAAAAAAAAAAKE1sCRTs9my9XO3Vw3NJRSCvrZb3mYtlXLSL-lNTd7-&exp=1745960604&osig=AAAAAAAAAAAAAAAAAAAAAEJYBiSC090STr9DdJXtcNClbH8_nTT21b6doXYDV3dm&signer=media-rpc&x-canva-quality=screen);
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* empurra a playlist para o fim */
+  padding: 20px;
+}
+
+.elementoA h3 {
+  font-size: 200%;
+  text-align: center;
+  margin: 20px;
+  margin-top: auto;
+}
+
+#playlist {
+  text-align: left;
+  margin-bottom: 0%;
+}
+
+/*--------------------------MURAL DE FOTOS-----------------------------*/
+.mural-fotos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.polaroid {
+  position: absolute;
+  top: 0;
+  transition: all 0.5s ease;
+  width: 150px;
+  padding: 10px 10px 25px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+
+.polaroid img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.destaque {
+  left: 240px;
+  z-index: 2;
+  transform: scale(1.1) rotate(0deg);
+  opacity: 1;
+}
+
+#foto-esquerda {
+  left: 0;
+  z-index: 1;
+  transform: rotate(-5deg);
+}
+
+#foto-centro {
+  left: calc(50% - 75px);
+  /* centraliza baseado na nova largura */
+}
+
+#foto-direita {
+  left: calc(100% - 150px);
+  z-index: 1;
+  transform: rotate(5deg);
+}
+
+.seta {
+  background-color: #ffffff;
+  color: #333;
+  border: none;
+  font-size: 24px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 3;
+}
+
+.seta:hover {
+  background-color: #f0f0f0;
+}
+
+/*--------------------------PLAYLIST BOX-----------------------------*/
+.playlist-box {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: rgb(0, 0, 0);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/*-------------------------------------------------------*/
+.elementoB {
+  flex-direction: column;
+
+  flex: 1;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  overflow-y: auto;
+
+  background-image: url(https://i.pinimg.com/736x/25/69/68/256968968c4805288af58e348a162efa.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 1px solid black;
+}
+
+.container-blocos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex: 1;
+  gap: 16px;
+}
+
+.bloco {
+  background-color: rgba(0, 0, 0, 0.658);
+  border: 4px solid #000000;
+  padding: 15px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: sans-serif;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100%; /* faz ele ocupar a altura dada pela grid */
+}
+/*-------------------------BARRA PROGRESSO------------------------------*/
+
+@font-face {
+  font-family: 'Minecraftia';
+  src: url('https://fonts.cdnfonts.com/s/14955/Minecraftia-Regular.ttf') format('truetype');
+}
+
+.container-barra-progresso{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.barra-progresso {
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-color: #000000de;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 10;
+  margin: 20px 0px;
+}
+
+.progresso {
+  height: 100%;
+  background-color: #27f115;
+  transition: width 0.5s ease-in-out;
+}
+
+.nivel {
+  font-family: 'Minecraftia', sans-serif;
+  color: #27f115;
+  font-size: 20px;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.objetivo {
+  position: absolute;
+  top: 50%;
+  bottom: 100%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+  margin-bottom: 6px;
+}
+
+.objetivo:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+/*-------------------------------------------------------*/
