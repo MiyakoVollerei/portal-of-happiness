@@ -7,9 +7,25 @@ const imagens = [
 
 document.addEventListener("DOMContentLoaded", () => {
     mover(0); // inicia com as imagens corretas
+
+    // Efeito sonoro ao passar o mouse nas imagens do rodapé
+    const hoverSound = new Audio('sounds/hover-som.mp3');
+    hoverSound.volume = 0.5;
+
+    document.querySelectorAll('.imagem-com-legenda').forEach(imgBox => {
+        imgBox.addEventListener('mouseenter', () => {
+            hoverSound.currentTime = 0;
+            hoverSound.play();
+        });
+    });
 });
 
 function mover(direcao) {
+     // Toca som de clique ao clicar na seta
+     const clickSound = new Audio('sounds/click.mp3');
+     clickSound.volume = 0.5;
+     clickSound.play();
+
     if (direcao === 1) {
         imagens.push(imagens.shift()); // move 1º para o fim
     } else {
