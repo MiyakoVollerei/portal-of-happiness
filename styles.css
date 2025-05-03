@@ -283,19 +283,15 @@ header {
 }
 
 .seta {
-  background-color: #ffffff;
-  color: #333;
+  background: none;
   border: none;
-  font-size: 24px;
-  padding: 10px 16px;
-  border-radius: 50%;
   cursor: pointer;
   transition: background 0.3s;
   z-index: 3;
 }
 
-.seta:hover {
-  background-color: #f0f0f0;
+.seta img:active{
+  border: 3px solid rgba(0, 0, 0, 0);
 }
 
 /*--------------------------PLAYLIST BOX-----------------------------*/
@@ -405,6 +401,7 @@ header {
 
 .coluna-esquerda {
   flex: 1;
+  margin-bottom: 50px;
 }
 
 .coluna-direita {
@@ -419,7 +416,7 @@ header {
 .bloco-grande {
   flex: 1;
   background-color: #333;
-  border: 3px solid cyan;
+  border: 3px solid rgb(0, 0, 0);
   height: 100%;
   margin-right: 10px;
 }
@@ -427,7 +424,7 @@ header {
 .bloco-topo {
   flex: 1;
   background-color: #333;
-  border: 3px solid cyan;
+  border: 3px solid rgb(0, 0, 0);
   margin-left: 10px;
 }
 
@@ -443,11 +440,12 @@ header {
 .bloco-meio {
   background-color: #333;
   flex: 1;
-  border: 3px solid cyan;
+  border: 3px solid rgb(0, 0, 0);
   height: 200px;
 }
 
 .livro-levitando {
+  margin-top: 15px;
   width: 150px;
   animation: levitar 3s ease-in-out infinite;
 }
