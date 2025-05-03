@@ -302,6 +302,7 @@ header {
   gap: 20px;
   padding: 20px;
   overflow-y: auto;
+  margin: 0 auto;
 
   background-image: url(https://i.pinimg.com/736x/25/69/68/256968968c4805288af58e348a162efa.jpg);
   background-position: center;
@@ -316,20 +317,6 @@ header {
   gap: 16px;
 }
 
-.bloco {
-  background-color: rgba(0, 0, 0, 0.658);
-  border: 4px solid #000000;
-  padding: 15px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-family: sans-serif;
-  color: black;
-
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  height: 100%; /* faz ele ocupar a altura dada pela grid */
-}
 /*-------------------------BARRA PROGRESSO------------------------------*/
 
 @font-face {
@@ -363,6 +350,7 @@ header {
 }
 
 .nivel {
+  font-weight: bold;
   font-family: 'Minecraftia', sans-serif;
   color: #27f115;
   font-size: 20px;
@@ -399,3 +387,56 @@ header {
   font-size: 12px;
 }
 /*-------------------------------------------------------*/
+.bloco-conteudo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.bloco-grande {
+  background-color: #333;
+  height: 300px;
+  border: 3px solid cyan;
+}
+
+.bloco-pequeno {
+  background-color: #333;
+  height: 140px;
+  margin-bottom: 10px;
+  border: 3px solid cyan;
+}
+
+.area-direita {
+  position: absolute;
+  right: 20px;
+  bottom: 90px;
+}
+/*--------------------------LIVRO DE RECEITAS-----------------------------*/
+.livro-levitando {
+  width: 150px;
+  animation: levitar 3s ease-in-out infinite;
+}
+
+@keyframes levitar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+/*---------------------------INSPIRAÇÕES----------------------------*/
+.rodape-imagens {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.rodape-imagens img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}

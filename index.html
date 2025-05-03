@@ -104,52 +104,66 @@
                     <div class="nivel">40%</div>
                 </div>
                 <div class="container-blocos">
-                    <div class="bloco">Conteúdo 1</div>
-                    <div class="bloco">Conteúdo 2</div>
-                    <div class="bloco">Conteúdo 3</div>
-                    <div class="bloco">Conteúdo 4</div>
+                    <div class="bloco-conteudo">
+                        <div class="bloco-grande"></div>
+                        <div>
+                            <div class="bloco-pequeno"></div>
+                            <div class="bloco-pequeno"></div>
+                        </div>
+                        <div class="area-direita">
+                            <a href="https://heather-wednesday-6ff.notion.site/1e6cd5c228c480519502d9242c75c407?v=1e6cd5c228c481edb1cc000ca89ce9e0"target="_blank" rel="noopener noreferrer">
+                                <img src="images/livro.png" alt="Livro de Receitas" class="livro-levitando">
+                            </a>
+                        </div>
+                        
+                        <div class="rodape-imagens">
+                            <img src="images/johnny-e-mavis.jpg" alt="Johnny e Mavis">
+                            <img src="images/alan-e-maethe.jpg" alt="Alan e Maethe">
+                            <img src="images/scott-e-ramona.jpg" alt="Scott e Ramona">
+                            <img src="images/leon-e-nilce.jpg" alt="Leon e Nilce">
+                        </div>
+                    </div>
                 </div>
             </div>
+            <script src="scripts.js"></script>
         </div>
-        <script src="scripts.js"></script>
-    </div>
 
-    <div id="loading">
-        <div class="caixa-loading">
-            <p>Carregando o portal...</p>
-            <img src="https://64.media.tumblr.com/8aacd06dce8447b271606ff73efc3ab1/e619323abe72d535-8f/s75x75_c1/df93598b8d644ce6a93de1b54fb8a330b4174f59.gifv"
-                alt="miku-loading">
+        <div id="loading">
+            <div class="caixa-loading">
+                <p>Carregando o portal...</p>
+                <img src="https://64.media.tumblr.com/8aacd06dce8447b271606ff73efc3ab1/e619323abe72d535-8f/s75x75_c1/df93598b8d644ce6a93de1b54fb8a330b4174f59.gifv"
+                    alt="miku-loading">
+            </div>
         </div>
-    </div>
 
-    <script>
-        function verificarSenha() {
-            const senhaCorreta = "26042025";
-            const senhaDigitada = document.getElementById("senha").value;
+        <script>
+            function verificarSenha() {
+                const senhaCorreta = "26042025";
+                const senhaDigitada = document.getElementById("senha").value;
 
-            if (senhaDigitada === senhaCorreta) {
-                document.getElementById("mensagem-erro").style.display = "none";
+                if (senhaDigitada === senhaCorreta) {
+                    document.getElementById("mensagem-erro").style.display = "none";
 
-                // Apaga a tela da senha
-                document.getElementById("tela-senha").style.opacity = "0";
-                setTimeout(() => {
-                    document.getElementById("tela-senha").style.display = "none";
-
-                    // Mostra tela de loading
-                    const loading = document.getElementById("loading");
-                    loading.style.display = "flex";
-
-                    // Depois de 3 segundos, mostra o conteúdo
+                    // Apaga a tela da senha
+                    document.getElementById("tela-senha").style.opacity = "0";
                     setTimeout(() => {
-                        loading.style.display = "none";
-                        document.getElementById("conteudo").style.display = "block";
-                    }, 3000);
-                }, 800); // tempo para tela-senha sumir suavemente
-            } else {
-                document.getElementById("mensagem-erro").style.display = "block";
+                        document.getElementById("tela-senha").style.display = "none";
+
+                        // Mostra tela de loading
+                        const loading = document.getElementById("loading");
+                        loading.style.display = "flex";
+
+                        // Depois de 3 segundos, mostra o conteúdo
+                        setTimeout(() => {
+                            loading.style.display = "none";
+                            document.getElementById("conteudo").style.display = "block";
+                        }, 3000);
+                    }, 800); // tempo para tela-senha sumir suavemente
+                } else {
+                    document.getElementById("mensagem-erro").style.display = "block";
+                }
             }
-        }
-    </script>
+        </script>
 </body>
 
 </html>
