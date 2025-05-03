@@ -38,6 +38,7 @@ html {
 }
 
 /*--------------------------LOGIN-----------------------------*/
+
 #tela-senha {
   position: fixed;
   top: 0;
@@ -98,7 +99,7 @@ html {
   background-color: #000;
   color: white;
   font-family: "Pixelify Sans", sans-serif;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
@@ -106,8 +107,23 @@ html {
 }
 
 .caixa-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
   text-align: center;
 }
+
+.caixa-loading img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  display: block;
+  margin-top: 10px;
+}
+
 
 @keyframes girar {
   0% {
