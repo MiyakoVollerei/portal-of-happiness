@@ -2,7 +2,18 @@
 const imagens = [
     "images/carrossel/imagem-1.jpg",
     "images/carrossel/imagem-2.jpg",
-    "images/carrossel/imagem-3.jpg"
+    "images/carrossel/imagem-3.jpg",
+    "images/carrossel/imagem-4.jpg",
+    "images/carrossel/imagem-5.jpg",
+    "images/carrossel/imagem-6.jpg",
+    "images/carrossel/imagem-7.jpg",
+    "images/carrossel/imagem-8.jpg",
+    "images/carrossel/imagem-9.jpg",
+    "images/carrossel/imagem-10.jpg",
+    "images/carrossel/imagem-11.jpg",
+    "images/carrossel/imagem-12.jpg",
+    "images/carrossel/imagem-13.jpg",
+    "images/carrossel/imagem-14.jpeg"
 ];
 
 document.addEventListener("DOMContentLoaded", () => {

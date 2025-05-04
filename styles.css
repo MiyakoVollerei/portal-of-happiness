@@ -416,9 +416,75 @@ header {
 .bloco-grande {
   flex: 1;
   background-color: #333;
-  border: 3px solid rgb(0, 0, 0);
+  border: 3px solid #caa0f7;
   height: 100%;
   margin-right: 10px;
+  max-height: 650px; /* Define uma altura visível */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.janela-fofa {
+  background-color: #fefeff;
+  border: 3px solid #d8b6ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(100, 100, 255, 0.1);
+  font-family: "Pixelify Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+}
+
+.topo-janela {
+  background-color: #e7c7ff;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #6b4a9b;
+  border-bottom: 2px solid #caa0f7;
+}
+
+.botoes-janela span {
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+.conteudo-carta {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  color: #4e3c6c;
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* Scrollbar estilo pixel */
+.conteudo-carta::-webkit-scrollbar {
+  width: 10px;
+}
+
+.conteudo-carta::-webkit-scrollbar-track {
+  background-color: #f5e9ff;
+  border-radius: 2px;
+}
+
+.conteudo-carta::-webkit-scrollbar-thumb {
+  background-color: #cc70c4;
+  border-radius: 2px;
+  border: 1px solid #d38dd0;
+}
+
+/* Firefox */
+.conteudo-carta {
+  scrollbar-width: thin;
+  scrollbar-color: #d38dd0 #f5e9ff;
 }
 
 .bloco-topo {
@@ -511,4 +577,80 @@ header {
 
 .imagem-com-legenda:hover .legenda {
   opacity: 1;
+}
+
+/*---------CELULAR-------------*/
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .elementoA, .elementoB {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .container-conteudo {
+    flex-direction: column;
+  }
+
+  .coluna-esquerda,
+  .coluna-direita {
+    width: 100%;
+    margin: 0;
+  }
+
+  .linha-meio {
+    flex-direction: column;
+  }
+
+  .rodape-imagens {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .imagem-com-legenda {
+    margin: 10px 0;
+  }
+
+  .titulo h1 {
+    font-size: 2rem;
+  }
+
+  .titulo h3 {
+    font-size: 1rem;
+  }
+
+  .polaroid {
+    position: static;
+    margin: 10px auto;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .seta {
+    display: none;
+  }
 }
