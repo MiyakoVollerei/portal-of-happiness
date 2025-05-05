@@ -120,7 +120,7 @@
                             <div class="topo-janela">
                                 <span class="titulo-janela">http://portalofhappiness.com 💌</span>
                                 <div class="botoes-janela">
-                                  <span>◻</span><span>▭</span><span>✕</span>
+                                    <span>◻</span><span>▭</span><span>✕</span>
                                 </div>
                             </div>
                             <div class="conteudo-carta">
@@ -132,23 +132,33 @@
                                     - Guardar todas as nossas boas memórias.<br>
                                     <br>
                                     Mas no fim é sobre muito mais que isso.<br>
-                                    Dificilmente conseguiria trazer para o plano tangível uma descrição do que você me faz sentir.<br>
+                                    Dificilmente conseguiria trazer para o plano tangível uma descrição do que você me
+                                    faz sentir.<br>
                                     <br>
-                                    O universo foi bom pra krlh comigo. Logo eu, que nunca acreditei em nada, passei a crer em destino. Esse papo de alma gêmea, fio invisível - a sensação de amar tanto alguém dessa maneira nunca será explicada de forma lógica e racional.  “Porque eu te amo? Bem, você é você. Tudo em mim ama absolutamente tudo em ti. Ainda que você mudasse ou fosse diferente, te amaria incondicionalmente…porque é você. ”<br>
+                                    O universo foi bom pra krlh comigo. Logo eu, que nunca acreditei em nada, passei a
+                                    crer em destino. Esse papo de alma gêmea, fio invisível - a sensação de amar tanto
+                                    alguém dessa maneira nunca será explicada de forma lógica e racional. “Porque eu te
+                                    amo? Bem, você é você. Tudo em mim ama absolutamente tudo em ti. Ainda que você
+                                    mudasse ou fosse diferente, te amaria incondicionalmente…porque é você. ”<br>
                                     <br>
-                                    É como se já te conhecesse a anos, e vivido o tempo todo esperando pelo momento do nosso encontro.<br>
+                                    É como se já te conhecesse a anos, e vivido o tempo todo esperando pelo momento do
+                                    nosso encontro.<br>
                                     <br>
                                     Uma vida procurando sem saber bem o que; uma vida buscando a razão do porquê…<br>
                                     E finalmente encontrar a resposta em um sorriso<br>
                                     Em um olhar<br>
                                     - E finalmente encontrar a resposta: você.<br>
                                     <br>
-                                    
-                                    É como se nossos neurônios fossem um só, e não funcionavam até agora porque estávamos longe kkkkk<br>
+
+                                    É como se nossos neurônios fossem um só, e não funcionavam até agora porque
+                                    estávamos longe kkkkk<br>
                                     <br>
-                                    Você torna tudo tão simples, que os arrombadinhos gigantes na minha cabeça viram coisinhas insignificantes.<br>
+                                    Você torna tudo tão simples, que os arrombadinhos gigantes na minha cabeça viram
+                                    coisinhas insignificantes.<br>
                                     <br>
-                                    Não vejo a hora de termos nossa vidinha juntos, e trazer para a realidade todos os nossos pequenos sonhos, todos os nossos grandes planos… Tudo o que a gente sempre quis.<br>
+                                    Não vejo a hora de termos nossa vidinha juntos, e trazer para a realidade todos os
+                                    nossos pequenos sonhos, todos os nossos grandes planos… Tudo o que a gente sempre
+                                    quis.<br>
                                     <br>
                                     Enfim<br>
                                     <br>
@@ -164,10 +174,10 @@
                     </div>
 
                     <div class="coluna-direita">
-                        <div class="bloco-topo"></div>
+                        <div class="bloco-topo">Topo</div>
 
                         <div class="linha-meio">
-                            <div class="bloco-meio"></div>
+                            <div class="bloco-meio">Meio</div>
                             <a href="https://heather-wednesday-6ff.notion.site/1e6cd5c228c480519502d9242c75c407?v=1e6cd5c228c481edb1cc000ca89ce9e0"
                                 target="_blank" rel="noopener noreferrer">
                                 <img src="images/livro.png" alt="Livro de Receitas" class="livro-levitando">
@@ -179,19 +189,23 @@
                         <div class="rodape-imagens">
                             <div class="imagem-com-legenda">
                                 <img src="images/johnny-e-mavis.jpg" alt="Johnny e Mavis">
-                                <span class="legenda">Amo absolutamente tudo em você! Não mudaria um mísero detalhe, assim como esses dois.💖</span>
+                                <span class="legenda">Amo absolutamente tudo em você! Não mudaria um mísero detalhe,
+                                    assim como esses dois.💖</span>
                             </div>
                             <div class="imagem-com-legenda">
                                 <img src="images/alan-e-maethe.jpg" alt="Alan e Maethe">
-                                <span class="legenda">Somos destinados um ao outro. Seremos eu e você contra tudo e todos até o fim.✨</span>
+                                <span class="legenda">Somos destinados um ao outro. Seremos eu e você contra tudo e
+                                    todos até o fim.✨</span>
                             </div>
                             <div class="imagem-com-legenda">
                                 <img src="images/scott-e-ramona.jpg" alt="Scott e Ramona">
-                                <span class="legenda">Você é literalmente a garota dos meus sonhos. Minha esposinha do coração.🥰</span>
+                                <span class="legenda">Você é literalmente a garota dos meus sonhos. Minha esposinha do
+                                    coração.🥰</span>
                             </div>
                             <div class="imagem-com-legenda">
                                 <img src="images/leon-e-nilce.jpg" alt="Leon e Nilce">
-                                <span class="legenda">Superaremos cada dificuldade juntos, não importa o tempo ou distância.💕</span>
+                                <span class="legenda">Superaremos cada dificuldade juntos, não importa o tempo ou
+                                    distância.💕</span>
                             </div>
                         </div>
                     </div>
@@ -232,6 +246,23 @@
                     erro.style.display = "block";
                 }
             }
+
+            // Ativar legenda no clique — apenas para celular
+            document.querySelectorAll('.imagem-com-legenda').forEach(img => {
+                img.addEventListener('click', function () {
+                    if (window.innerWidth <= 768) {
+                        // Alterna a classe "ativo"
+                        this.classList.toggle('ativo');
+
+                        // Desativa as outras
+                        document.querySelectorAll('.imagem-com-legenda').forEach(outro => {
+                            if (outro !== this) {
+                                outro.classList.remove('ativo');
+                            }
+                        });
+                    }
+                });
+            });
         </script>
 
 </body>
